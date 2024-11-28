@@ -65,6 +65,8 @@ func CBCDecrypt(encryptedMessage string, keyBytes []byte, iv []byte) (string, er
 
 // IV generates a new random initialization vector (IV) for use in encryption.
 // It returns the IV as a byte slice or an error if something goes wrong.
+// Use a new IV for each encryption to ensure security.
+// Use the same IV that was used during encryption to decrypt the corresponding ciphertext.
 func IV() ([]byte, error) {
 	{
 		iv := ivPool.Get().([]byte)
