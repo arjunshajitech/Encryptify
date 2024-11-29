@@ -1,12 +1,17 @@
-# Simple E2EE Utility in Go
+# `Simple E2EE Utility in Go`
 
 This utility provides easy-to-use methods for implementing end-to-end encryption (E2EE) tasks in Go.
 
-- **ECDH** (Elliptic Curve Diffie-Hellman) for secure key exchange.
-- **X3DH** (Extended Triple Diffie-Hellman) for advanced key exchange protocols.
-- **AES-CBC** (Advanced Encryption Standard - Cipher Block Chaining) for secure encryption and decryption of messages.
-
-## Installation
+## `Installation`
 
 ```bash
 go get github.com/arjunshajitech/encryptify
+```
+
+## `Visit the examples for:`
+
+- `AES`: Use AES encryption for secure communication.
+- `ECDH-AES`: Secure key exchange using Elliptic Curve Diffie-Hellman (ECDH) combined with AES encryption.
+- `ECDH-Ed25519-AES`: Advanced key exchange with Ed25519 curve, followed by AES encryption.
+
+`All the above examples demonstrate how to perform encryption and secure communication using Go.`
