@@ -46,10 +46,10 @@ func ECDH(ecdhPrivateKey *ecdh.PrivateKey, ecdhPublicKey *ecdh.PublicKey) ([]byt
 	}
 }
 
-func X3DH(dh1, dh2, dh3, salt []byte, outputLen X3DHSecretOutputLength) (secret []byte, secretSalt []byte, err error) {
+func X3DH(dh1, dh2, dh3, dh4, salt []byte, outputLen X3DHSecretOutputLength) (secret []byte, secretSalt []byte, err error) {
 
 	h := hmac.New(sha256.New, salt)
-	combinedSecrets := bytes.Join([][]byte{dh1, dh2, dh3}, nil)
+	combinedSecrets := bytes.Join([][]byte{dh1, dh2, dh3, dh4}, nil)
 	h.Write(combinedSecrets)
 
 	prk := h.Sum(nil)
